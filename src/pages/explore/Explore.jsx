@@ -13,6 +13,7 @@ import { fetchDataFromApi } from "../../utils/api";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
+import HelmetComponent from "../../components/helmet/HelmetComponent";
 
 let filters = {};
 
@@ -101,7 +102,9 @@ const Explore = () => {
 
     return (
         <div className="explorePage">
+            <HelmetComponent title="explore" description="explore description" />
             <ContentWrapper>
+                
                 <div className="pageHeader">
                     <div className="pageTitle">
                         {mediaType === "tv"

@@ -8,6 +8,7 @@ import Cast from "./cast/Cast";
 import VideosSection from "./videosSection/VideosSection";
 import Similar from "./carousels/Similar";
 import Recommendation from "./carousels/Recommendation";
+import HelmetComponent from "../../components/helmet/HelmetComponent";
 
 const Details = () => {
     const { mediaType, id } = useParams();
@@ -18,6 +19,7 @@ const Details = () => {
 
     return (
         <div>
+            <HelmetComponent title="Details" description="details" keywords="fantacy, superhero, anime" author="adaptation, hanry and june, capote, adult world"  />
             <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
             <Cast data={credits?.cast} loading={creditsLoading} />
             <VideosSection data={data} loading={loading} />
